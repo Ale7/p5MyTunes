@@ -1,0 +1,123 @@
+****************
+* Project 5: MyTunes
+* CS121-01
+* 27 April 2016
+* Alec Wooding
+****************
+
+OVERVIEW:
+
+ This program is an iTunes like application with a heat map visualization that shows which songs are played
+ the most.   
+
+INCLUDED FILES:
+
+ * MyTunesGUI.java - main class
+ * MyTunesGUIPANEL.java - created class
+ * PlayListInterface.java - provided interface
+ * PlayList.java - created class (imported from P3)
+ * Song.java - created class (imported from P3)
+ * PlayableSong.java - provided class
+ * MyTunesPlayList.java - provided class
+ * README - this file
+ * /sounds - directory of songs and playlist.txt
+ * /images - directory of images used in GUI
+
+COMPILING AND RUNNING:
+
+ To compile, execute the following command in the main project directory:
+
+ $ javac MyTunesGUI.java
+
+ Run the compiled class with the following command:
+
+ $ java MyTunesGUI
+
+ The application will launch and a sample playlist will be loaded.
+
+ Once the program is running, the functionality of the program depends on the actions of the user.  Basic music
+ player functionality - such as playing, pausing, skipping forward/back a song, and organizing a playlist - is
+ included.  On the right side of the GUI, a music square can also be used to play songs with a single click.
+ The color of each square apart of the grid will change color from cyan to red depending on how many times that
+ song is played.  
+    
+DISCUSSION:  
+
+ Overall, this project went well for me.  I feel that I learned a lot during the process and have a much better
+ understanding of components, events, and listeners than I did before I started.  I enjoyed working with graphics,
+ being able to see parts of the code in action.  Setting up the GUI was a two part process for me.  At first, I
+ made a very simple GUI which looked very poor, but had all of the necessary components for the application to
+ function.  After making this simple GUI, I worked on the rest of the project.  At the end of my time working
+ on this project, I have came back to work on the GUI and improve the look of it.  Colors, spacing, sizing, fonts,
+ and other aspects were all changed quite a bit from the original GUI.
+
+ As I worked on the events and listeners, I also created some helper methods.  A majority of these methods purpose
+ is to update buttons/panels/labels etc. which can change throughout the program.  By making these methods, I
+ was able to cut down on the already lengthy amount of code for MyTunesGUIPanel.java.  I also had to create a
+ few methods and a listener for the timer which was somewhat challenging for me.  The timer example code from git
+ helped me out with this a lot.
+
+ Of all the parts of this project, the hardest for me was properly updating the music square.  I remember spending
+ a considerable amount of time tying to figure out how to get the colors to change for each of the buttons apart
+ of the grid.  I couldn't figure out how to properly count/record the number of times a particular song has been
+ played.  I finally had an 'aha!' moment when I realized that a method was already provided which returns the number
+ of times a song has been played (in PlayableSong.java).  In the future, I will be sure to do a thorough reading of
+ provided code before diving into a project so that I hopefully can save myself some time and headache.   
+
+TESTING:
+
+ I tested my program constantly throughout the coding process (launched using eclipse),
+ especially when I was initially creating the GUI for the application.  Compared to the
+ previous projects, the amount of testing I did with this project was at least double that
+ of any other.
+
+ I also deleted .class files and moved the remaining over to Onyx to ensure
+ that the program would be able to compile and run.
+
+ Because the program requires user input, there is a possibility that the program
+ will have an error, but the program will continue to function as intended in most cases.
+
+ As I was coding this application, I did a lot of testing to find possible issues which could
+ arise as a user is interacting with the interface.  Most of the time, I was able to fix the bugs/errors
+ which I found.  Sometimes, though, I could not find a solution.
+
+ The following are two possible issues I found but were unable to fix:
+
+ 1) If the user removes all songs from the playlist, the music square will run into issues when
+    attempting to rebuild.  I tried to tinker with my code and do some research online to come up
+    with a solution, but to no success.
+
+ 2) When adding a new songs, there are several issues which can occur.  For example, the user could
+    add a file which is not a song file, or a song file of the wrong file type.  When going to play the
+    faulty file, more issues would arise.  
+  
+
+EXTRA CREDIT:
+
+ For this project, I did some extra credit.  The additional features which I included are the following:
+
+ - Loop mode (play all alternative) (1)
+ - Rename playlist button (2)
+
+ (1) Loop mode - when this button is toggled, songs will play one after another, rather than pausing at 
+     the end of the song.  Similar to a play all button but with more flexibility in use for the user.
+
+ (2) Rename playlist button - as simple as it sounds.  The feature allows the user to rename the playlist
+     within the application.  This feature can be used by clicked on the name of the playlist at the top
+     of the GUI, which creates a pop up window to input a new playlist name.
+
+
+SOURCES:
+ 
+ Because the project write up was so detailed, I felt like I was heading in the right direction throughout the
+ coding process.  When I did get stuck I was able to look at examples in Chapter 06 from the git repository 
+ to understand what needed to be done.  I also used the following sources about BoxLayout and button appearance: 
+ 
+ BoxLayout:
+ http://docs.oracle.com/javase/tutorial/uiswing/layout/box.html
+
+ Customizing Buttons:
+ http://stackoverflow.com/questions/14159536/creating-jbutton-with-customized-look
+ 
+
+----------------------------------------------------------------------------
